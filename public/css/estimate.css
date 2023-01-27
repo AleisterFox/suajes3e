@@ -1,0 +1,122 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;600&family=Poppins:wght@200&display=swap');
+
+.body{
+    margin: 0;   
+}
+
+.header {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-height: 300px;
+    max-width: 150px;
+}
+
+.datos {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.datos .light {
+    font-weight: light;
+}
+
+.datos2 {
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+}
+
+.intermedio {
+    padding-top: 10px;
+}
+
+.productos {
+    width: 100%;
+    padding-top: 10px;
+    border-spacing: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.productos th {
+    text-align: center;
+    background-color: #8DB4E2;
+    border: 1px solid black;
+}   
+
+.productos td {
+    text-align: center;
+    border: 1px solid black;
+    border-top: none;
+}
+
+.productos2 th {
+    text-align: center;
+    background-color: #8DB4E2;
+    border-top: none;
+}   
+
+.productos2 td {
+    text-align: center;
+    border: 1px solid black;
+    border-top: none;
+    min-width: 63px;
+}
+
+.productos2 {
+    width: 100%;
+    padding-top: 0px;
+    border-spacing: 0;
+}
+
+.productos2 .no-margin {
+    border: none;
+}
+
+.productos2 .left {
+    text-align: left;
+}
+
+.trazos {
+    padding-top: 20px;
+}
+
+.trazos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.trazos .container img {
+    max-width: 500px;
+    margin: 0px 0px 5px 15% ;
+}
+
+#firma {
+    padding-top: 100px;
+}
+
+.firma  {
+    border-top: 1px solid black;
+    max-width: 200px;
+    text-align: center;
+}
+
+.total {
+    min-width: 38px;
+    max-width: 40px;
+}

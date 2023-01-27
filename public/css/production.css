@@ -1,0 +1,98 @@
+img{
+    max-height: 75px;
+    max-width: 100px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    text-align: left;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.cabecera {
+    width: 100%;
+    max-height: 75px;
+}
+
+.cabecera td {
+    text-align: center;
+}
+
+.datos1 {
+    font-size: 14px;
+    width: 100%;
+}
+
+.datos1 td {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.datos1 th {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.datos1 .first-left {
+    border-left: 1px solid black;
+}
+
+.datos1 .last-right {
+    border-right: 1px solid black;
+}
+
+.trazos {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.trazos td {
+    width: 100%;
+}
+
+.trazos td img {
+    padding: 20px;
+    min-width: 400px;
+    min-height: 300px;
+    margin: 0px 0px 5px 15% ;
+}
+
+
+.footer, .footer_header {
+    border: 1px solid black;
+}
+
+.footer_header tr .header {
+    background-color: rgb(192, 190, 190);
+}
+
+.footer th {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.footer tr .first-left {
+    border-left: 1px solid black;
+}
+
+.footer tr .last-right {
+    border-left: none;
+    border-right: 1px solid black;
+}
+
+.firmas td {
+    border: none;
+    text-align: center;
+    border-collapse: separate;
+}
+
+.firma {
+    border:none;
+    border-top: 1px solid black !important;
+}
