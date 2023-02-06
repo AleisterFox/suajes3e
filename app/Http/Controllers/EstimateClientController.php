@@ -164,6 +164,7 @@ class EstimateClientController extends Controller
      */
     public function show(Customer $customer, Estimate $estimate)
     {
+        
         $customers = Customer::all();
         $pdf = PDF::loadView('estimates.show',[
             'estimate'=>$estimate,

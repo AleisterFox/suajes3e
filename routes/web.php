@@ -39,6 +39,8 @@ Route::get('/customers/{id}/machines/{ids}/confirmDelete',
 /* ESTIMATES */
 Route::resource('/estimates', \App\Http\Controllers\EstimateController::class)-> middleware('auth');
 Route::resource('customer.estimates',\App\Http\Controllers\EstimateClientController::class)-> middleware('auth');
+Route::get('/customer/{customer}/estimates/{estimate}',
+[\App\Http\Controllers\ShowEstimateController::class, 'show']);
 Route::get('/customer/{id}/estimates/{ids}/confirmDelete',
 [\App\Http\Controllers\EstimateClientController::class, 'confirmDelete']);
 Route::get('/customer/{id}/estimates/{ids}/send', 
