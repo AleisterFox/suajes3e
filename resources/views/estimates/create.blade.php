@@ -59,7 +59,7 @@
                                     </div>
 
                                     <div class="input_box">
-                                        <label for="Tiempo_liberacion">Tiempo de liberacion (dias)</label>
+                                        <label for="Tiempo_liberacion">Tiempo de entrega (dias)</label>
                                         <input type="text" class="form_control" id="Tiempo_liberacion" name="Tiempo_liberacion" value="{{old('Tiempo_liberacion')}}">
                                     </div>
                                 </div>
@@ -103,13 +103,13 @@
                                         <!-- Trazo de suaje -->
                                         <div class="input_box file-select">
                                             <span class="Img1">
-                                                <input type="file" name="Img1" id="Img1" accept="image/*">
+                                                <input type="file" name="Img1" id="Img1">
                                             </span>
                                             <label for="Img1"><span class="Img1">Subir Trazo &nbsp; <i class="bx bx-upload"></i></span></label>
                                         </div>
                                         
 
-                                        <button type="button" class="next btn btn-primary float-right" id="mostrar">Argegar Suaje <i class="bx bx-plus"></i></button>
+                                        <button type="button" class="next btn btn-primary float-right" id="mostrar">Agregar Suaje <i class="bx bx-plus"></i></button>
                                     </div>
 
                                 <!-- Item2 -->
@@ -152,7 +152,7 @@
                                             <label for="Img2" id="Img2l" hidden><span class="Img2">Subir Trazo &nbsp; <i class="bx bx-upload"></i></span></label>
                                         </div>
                                         
-                                        <button type="button" class="next btn btn-primary float-right" id="mostrar2" hidden>Argegar Suaje <i class="bx bx-plus"></i></button>
+                                        <button type="button" class="next btn btn-primary float-right" id="mostrar2" hidden>Agregar Suaje <i class="bx bx-plus"></i></button>
                                     </div> 
 
                                 <!-- Item3 -->
@@ -195,7 +195,7 @@
                                             <label for="Img3" id="Img3l" hidden><span class="Img3">Subir Trazo &nbsp; <i class="bx bx-upload"></i></span></label>
                                         </div>
                                         
-                                        <button type="button" class="next btn btn-primary float-right" id="mostrar3" hidden>Argegar Suaje <i class="bx bx-plus"></i></button>
+                                        <button type="button" class="next btn btn-primary float-right" id="mostrar3" hidden>Agregar Suaje <i class="bx bx-plus"></i></button>
                                     </div> 
 
                                 <!-- Item4 -->

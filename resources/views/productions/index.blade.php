@@ -53,7 +53,7 @@
                                             <td>{{$customer->Compañia}}</td>
                                         @endif
                                     @endforeach
-                                    <td class="botones"><a class="buttn buttn-primary" href="./productions/{{$production->id}}/edit"><i class='bx bx-edit'></i> </a> <a class="buttn buttn-danger" href="./{{$production->id}}/confirmDelete"><i class='bx bxs-trash'></i></a> <a class="buttn buttn-success" href="./productions/{{$production->id}}" target="_blank"><i class="bx bxs-show"></i></a></td>
+                                    <td class="botones"><a class="buttn buttn-primary" href="./productions/{{$production->id}}/edit"><i class='bx bx-edit'></i> </a> <a class="buttn buttn-danger" href="./productions/{{$production->id}}/confirmDelete"><i class='bx bxs-trash'></i></a> <a class="buttn buttn-success" href="./productions/{{$production->id}}" target="_blank"><i class="bx bxs-show"></i></a></td>
                                 </tr>
                             
                         @endforeach

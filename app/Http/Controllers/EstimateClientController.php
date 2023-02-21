@@ -9,7 +9,8 @@ use App\Models\Customer;
 use App\Models\Machine;
 use App\Mail\estimatesMailable;
 use Illuminate\Support\Facades\Mail;
-use PDF;
+use Spatie\PdfToImage\Pdf;
+use Intervention\Image\Facades\Image;
 
 class EstimateClientController extends Controller
 {
@@ -58,7 +59,7 @@ class EstimateClientController extends Controller
         $validData = $request->validate([
             'Sj1' => 'required',
             'S1' => 'required',
-            'Img1' => 'required|image',
+            'Img1' => 'required',
             'Folio' => 'required',
             'Cliente' => 'required',
             'Tiempo_liberacion' => 'required',
@@ -115,13 +116,44 @@ class EstimateClientController extends Controller
         $estimate -> Sj5 = $validData['Sj5'];
         $estimate -> S5 = $validData['S5'];
 
+
+        // if ($request->hasFile("Img1")){
+        //     $trazo1 = $request->file("Img1");
+        //     $nombreTrazo = Str::slug($request->Sj1).".".$trazo1->getClientOriginalExtension();
+
+        //     if ($trazo1->getClientOriginalExtension() === 'pdf') {
+        //         $pdfPath = $trazo1->storeAs('pdfs',$nombreTrazo,'public');
+        //         $nombreTrazoPng = Str::slug($request->Sj1).'.png';
+        //         $pngPath = public_path("img/trazos/".$nombreTrazoPng);
+
+        //         $pdf = new Pdf(storage_path('app/public/'.$pdfPath));
+        //         $pdf->setPage(1)
+        //             ->setOutputFormat('png')
+        //             ->saveImage($pngPath);
+
+        //         $trazo1 = Image::make($pngPath);
+        //     } else {
+        //         $imagePath = $trazo1->storeAs('images',$nombreTrazo,'public');
+        //         $trazo1 = Image::make(storage_path('app/public/'.$imagePath));
+        //     }
+
+        //     $trazo1->resize(500,500,function ($constraint) {
+        //         $constraint->aspectRatio();
+        //         $constraint->upsize();
+        //     });
+
+        //     $trazo1->save(public_path("img/trazos/" . $nombreTrazo));
+        //     $estimate -> Img1 = "/img/trazos/".$nombreTrazo;           
+        // }  
+
         if ($request->hasFile("Img1")){
             $trazo1 = $request->file("Img1");
             $nombreTrazo = Str::slug($request->Sj1).".png";
             $ruta = public_path("img/trazos/");
             $trazo1->move($ruta,$nombreTrazo);
             $estimate -> Img1 = "/img/trazos/".$nombreTrazo;
-        }   
+        }
+
         if ($request->hasFile("Img2")){
             $trazo2 = $request->file("Img2");
             $nombreTrazo = Str::slug($request->Sj2).".png";

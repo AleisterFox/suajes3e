@@ -60,6 +60,9 @@ Route::get('/productions/template/create',
 Route::post('/productions/template/store', 
 [\App\Http\Livewire\ProductionOrder::class, 'store']);
 
+Route::get('/productions/{ids}/confirmDelete',
+[\App\Http\Controllers\ProductionsController::class, 'confirmDelete']);
+
 /* Inventories */
 Route::resource('/inventories',\App\Http\Controllers\InventoryMainController::class)-> middleware('auth');
 Route::resource('inventories.Hules', \App\Http\Controllers\HulesInventoryController::class)-> middleware('auth');

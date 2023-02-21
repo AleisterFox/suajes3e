@@ -97,6 +97,13 @@ class ProductionsController extends Controller
             'Profundidad_pleca_2000' => 'nullable'
         ]);
 
+        $customers = Customer::all();
+        foreach ($customers as $customer){
+            if ($validData['Cliente'] == $customer->Compañia){
+                $validData['Cliente']= $customer->id ;
+            }
+        }
+
         $production = new Production();
         $production -> Folio = $validData['Folio'];
         $production -> Cliente = $validData['Cliente'];
@@ -234,8 +241,20 @@ class ProductionsController extends Controller
      * @param  \App\Models\Production  $production
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Production $production)
+
+    public function confirmDelete($ids)
     {
-        //
+        $production = Production::findOrFail($ids);
+        return view('productions.confirmDelete',[
+            'production'=>$production
+        ]);
+    }
+    
+    public function destroy($ids)
+    {
+        $url = "/productions";
+        $production = Production::findOrFail($ids);
+        $production->delete();
+        return redirect($url);
     }
 }
