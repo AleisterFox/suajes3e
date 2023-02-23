@@ -50,8 +50,9 @@ Route::post('/customer/{id}/estimates/{ids}',
 
 /* PRODUCTIONS */
 Route::resource('/productions', \App\Http\Controllers\ProductionsController::class)-> middleware('auth');
-Route::get('/productions/select',
+Route::get('/productions/create/select',
 [\App\Http\Controllers\ProductionsController::class, 'select']);
+
 Route::get('/productions/create/{type}', 
 [\App\Http\Controllers\ProductionsController::class, 'create']);
 
@@ -60,7 +61,7 @@ Route::get('/productions/template/create',
 Route::post('/productions/template/store', 
 [\App\Http\Livewire\ProductionOrder::class, 'store']);
 
-Route::get('/productions/{ids}/confirmDelete',
+Route::get('/productions/{id}/confirmDelete',
 [\App\Http\Controllers\ProductionsController::class, 'confirmDelete']);
 
 /* Inventories */

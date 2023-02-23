@@ -49,13 +49,14 @@ class ProductionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($type)
     {
         
         return view('productions.create',[
             'machines' => Machine::all(),
             'customers' => Customer::all(),
             'estimates' => Estimate::all(),
+            'type' => $type
         ]);
     }
 
@@ -91,6 +92,10 @@ class ProductionsController extends Controller
             'Doblez' => 'required',
             'Medida_perforado' => 'required',
             'Hule' => 'required',
+            'Hule2' => 'nullable',
+            'Hule3' => 'nullable',
+            'Hule4' => 'nullable',
+            'Hule5' => 'nullable',
             'Img1' => 'required|image',
             'Type' => 'required',
             'Pleca_2000' => 'nullable',
@@ -124,6 +129,10 @@ class ProductionsController extends Controller
         $production -> Doblez = $validData['Doblez'];
         $production -> Medida_perforado = $validData['Medida_perforado'];
         $production -> Hule = $validData['Hule'];
+        $production -> Hule = $validData['Hule2'];
+        $production -> Hule = $validData['Hule3'];
+        $production -> Hule = $validData['Hule4'];
+        $production -> Hule = $validData['Hule5'];
         $production -> Type = $validData['Type'];
         $production -> Pleca_2000 = $validData['Pleca_2000'];
         $production -> Profundidad_pleca_2000 = $validData['Profundidad_pleca_2000'];
@@ -162,6 +171,10 @@ class ProductionsController extends Controller
             'Doblez' => 'required',
             'Medida_perforado' => 'required',
             'Hule' => 'required',
+            'Hule2' => 'nullable',
+            'Hule3' => 'nullable',
+            'Hule4' => 'nullable',
+            'Hule5' => 'nullable',
             'Img1' => 'required',
             'Type' => 'required',
             'Pleca_2000' => 'nullable',
@@ -188,6 +201,10 @@ class ProductionsController extends Controller
         $production -> Doblez = $validData['Doblez'];
         $production -> Medida_perforado = $validData['Medida_perforado'];
         $production -> Hule = $validData['Hule'];
+        $production -> Hule = $validData['Hule2'];
+        $production -> Hule = $validData['Hule3'];
+        $production -> Hule = $validData['Hule4'];
+        $production -> Hule = $validData['Hule5'];
         $production -> Type = $validData['Type'];
         $production -> Pleca_2000 = $validData['Pleca_2000'];
         $production -> Profundidad_pleca_2000 = $validData['Profundidad_pleca_2000'];
@@ -241,20 +258,20 @@ class ProductionsController extends Controller
      * @param  \App\Models\Production  $production
      * @return \Illuminate\Http\Response
      */
-
-    public function confirmDelete($ids)
+    
+    public function destroy($id)
     {
-        $production = Production::findOrFail($ids);
+        $url = "/productions";
+        $production = Production::findOrFail($id);
+        $production->delete();
+        return redirect($url);
+    }
+
+    public function confirmDelete($id)
+    {
+        $production = Production::findOrFail($id);
         return view('productions.confirmDelete',[
             'production'=>$production
         ]);
-    }
-    
-    public function destroy($ids)
-    {
-        $url = "/productions";
-        $production = Production::findOrFail($ids);
-        $production->delete();
-        return redirect($url);
     }
 }

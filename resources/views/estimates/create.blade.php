@@ -103,7 +103,7 @@
                                         <!-- Trazo de suaje -->
                                         <div class="input_box file-select">
                                             <span class="Img1">
-                                                <input type="file" name="Img1" id="Img1">
+                                                <input type="file" name="Img1" id="Img1" accept="image/*">
                                             </span>
                                             <label for="Img1"><span class="Img1">Subir Trazo &nbsp; <i class="bx bx-upload"></i></span></label>
                                         </div>

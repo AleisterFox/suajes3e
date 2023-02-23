@@ -3,7 +3,7 @@
 @section('title','Delete Production')
 
 @section('brand')
-<a class="h1 mb-0 text-white text-uppercase d-none d-lg-inline-block">Eliminar cotizacion: {{$production->Folio}}</a>
+<a class="h1 mb-0 text-white text-uppercase d-none d-lg-inline-block">Eliminar hoja de produccion: {{$production->Folio}}</a>
 @endsection
 
 @section('content')
@@ -21,7 +21,7 @@
                 </li>
             </ul>
         </div>
-        <form action="/productions/{{$production->ids}}" method="POST">
+        <form action="/productions/{{$production->id}}" method="POST">
             @csrf 
             @method('delete')
             <div class="input_box" id="button">

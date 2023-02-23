@@ -14,7 +14,7 @@
                 <div class="butn">
                     <ul>
                         <li>
-                            <a href="/productions/create">
+                            <a href="/productions/create/select">
                                 <i class='bx bx-plus'></i>
                                 <span>Nueva hoja</span>
                             </a>
