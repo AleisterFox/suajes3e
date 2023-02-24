@@ -14,7 +14,7 @@
         <div class="butn cancel_butn eliminar">
             <ul>
                 <li>
-                    <a href="/inventories/{{$id}}/Hules">
+                    <a href="/inventories/1/Hules">
                         <i class='bx bx-arrow-back'></i>
                         <span>Cancelar</span>
                     </a>

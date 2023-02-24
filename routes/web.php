@@ -67,10 +67,10 @@ Route::get('/productions/{id}/confirmDelete',
 /* Inventories */
 Route::resource('/inventories',\App\Http\Controllers\InventoryMainController::class)-> middleware('auth');
 Route::resource('inventories.Hules', \App\Http\Controllers\HulesInventoryController::class)-> middleware('auth');
-Route::get('/inventories/{inventory}/Hules/{Hule}/confirmDelete',
+Route::get('/inventories/1/Hules/{id}/confirmDelete',
 [\App\Http\Controllers\HulesInventoryController::class, 'confirmDelete']);
 Route::resource('inventories.Plecas', \App\Http\Controllers\PlecasInventoryController::class)-> middleware('auth');
-Route::get('/inventories/{ids}/Plecas/{id}/confirmDelete',
+Route::get('/inventories/2/Plecas/{id}/confirmDelete',
 [\App\Http\Controllers\PlecasInventoryController::class, 'confirmDelete']);
 
 

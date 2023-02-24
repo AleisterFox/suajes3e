@@ -14,14 +14,14 @@
         <div class="butn cancel_butn eliminar">
             <ul>
                 <li>
-                    <a href="/inventories/{{$ids}}/Plecas">
+                    <a href="/inventories/2/Plecas">
                         <i class='bx bx-arrow-back'></i>
                         <span>Cancelar</span>
                     </a>
                 </li>
             </ul>
         </div>
-        <form action="/inventories/{{$ids}}/Plecas/{{$id}}" method="POST">
+        <form action="/inventories/{{$id}}/Plecas/{{$pleca->id}}" method="POST">
             @csrf 
             @method('delete')
             <div class="input_box" id="button">
