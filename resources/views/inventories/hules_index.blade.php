@@ -41,6 +41,7 @@
                     <thead>
                         <tr>
                             <th>Item</th>
+                            <th>Descripcion</th>
                             <th class="acciones">Opciones</th>
                         </tr>
                     </thead>
@@ -48,7 +49,8 @@
                         @foreach($hules as $hule)
                             <tr>
                                 <td>{{$hule->Codigo_interno}}</td>
-                                <td class="botones"><a class="buttn buttn-primary" href="./Hules/{{$hule->id}}/edit"><i class='bx bx-edit'></i> </a> <a class="buttn buttn-danger" href="./{{$hule->id}}/confirmDelete"><i class='bx bxs-trash'></i></a></td>
+                                <td>{{$hule->Nombre_articulo}}</td>
+                                <td class="botones"><a class="buttn buttn-primary" href="./Hules/{{$hule->id}}/edit"><i class='bx bx-edit'></i> </a> <a class="buttn buttn-danger" href="./Hules/{{$hule->id}}/confirmDelete"><i class='bx bxs-trash'></i></a></td>
                             </tr>
                         @endforeach
                     </tbody>

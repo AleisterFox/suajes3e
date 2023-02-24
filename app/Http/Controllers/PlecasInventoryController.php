@@ -99,8 +99,22 @@ class PlecasInventoryController extends Controller
      * @param  \App\Models\PlecasInventory  $plecasInventory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PlecasInventory $plecasInventory)
+    public function destroy($id)
     {
-        //
+        $url = "/inventories";
+        $plca = PlecasInventory::findOrFail($id);
+        $pleca->delete();
+        return redirect($url);
+    }
+
+    public function confirmDelete($ids, $id)
+    {
+        $pleca = plecasInventory::findOrFail($id);
+        return view('inventories.plecas_confirmDelete',[
+            'pleca' => $pleca,
+            'ids' => $ids,
+            'id' => $id
+        ]);
     }
 }
+

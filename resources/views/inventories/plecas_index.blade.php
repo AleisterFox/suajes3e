@@ -41,6 +41,7 @@
                     <thead>
                         <tr>
                             <th>Item</th>
+                            <th>Descripcion</th>
                             <th class="acciones">Opciones</th>
                         </tr>
                     </thead>
@@ -48,7 +49,8 @@
                         @foreach($plecas as $pleca)
                             <tr>
                                 <td>{{$pleca->Codigo_interno}}</td>
-                                <td class="botones"><a class="buttn buttn-primary" href="./Plecas/{{$pleca->id}}/edit"><i class='bx bx-edit'></i> </a> <a class="buttn buttn-danger" href="./{{$pleca->id}}/confirmDelete"><i class='bx bxs-trash'></i></a></td>
+                                <td>{{$pleca->Nombre}}</td>
+                                <td class="botones"><a class="buttn buttn-primary" href="./Plecas/{{$pleca->id}}/edit"><i class='bx bx-edit'></i> </a> <a class="buttn buttn-danger" href="./Plecas/{{$pleca->id}}/confirmDelete"><i class='bx bxs-trash'></i></a></td>
                             </tr>
                         @endforeach
                     </tbody>

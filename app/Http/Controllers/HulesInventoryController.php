@@ -92,8 +92,20 @@ class HulesInventoryController extends Controller
      * @param  \App\Models\HulesInventory  $hulesInventory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(HulesInventory $hulesInventory)
+    public function destroy($id)
     {
-        //
+        $url = "/inventories";
+        $hule = HulesInventory::findOrFail($id);
+        $hule->delete();
+        return redirect($url);
+    }
+
+    public function confirmDelete($inventory, $Hule)
+    {
+        $hule = HulesInventory::findOrFail($Hule);
+        return view('inventories.hules_confirm_delete',[
+            'hule' => $hule,
+            'id' => $inventory
+        ]);
     }
 }

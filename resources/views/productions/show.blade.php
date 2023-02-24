@@ -174,11 +174,11 @@
                 <th class="" rowspan="3">Perforado:</th>
                 <td class="">970</td>
                 <td class="<?php echo $perforado[1] ?>"></td>
-                <td class="">1/8x1/8</td>
+                <td class="">1/2x1/2</td>
                 <td class="<?php echo $perforado[2] ?>"></td>
             </tr>
             <tr>
-                <td class="">1/2x1/2</td>
+                <td class="">1/8x1/8</td>
                 <td class="<?php echo $perforado[3] ?>"></td>
                 <td class="">1/4x1/4</td>
                 <td class="<?php echo $perforado[4] ?>"></td>
@@ -348,17 +348,15 @@
                 }
             @endphp
             <tr>
-                <th class="" rowspan="3">Perforado:</th>
-                <td class="">1/8x1/8</td>
+                <th class="" rowspan="2">Perforado:</th>
+                <td class="">1/2x1/2</td>
                 <td class="<?php echo $perforado[1] ?>"></td>
+                <td class="">1/8x1/8</td>
+                <td class="<?php echo $perforado[2] ?>"></td>
             </tr>
             <tr>
-                <td class="">1/2x1/2</td>
-                <td class="<?php echo $perforado[2] ?>"></td>
                 <td class="">1/4x1/4</td>
                 <td class="<?php echo $perforado[3] ?>"></td>
-            </tr>
-            <tr>
                 <td class="">3/8x3/8</td>
                 <td class="<?php echo $perforado[4] ?>"></td>
             </tr>
