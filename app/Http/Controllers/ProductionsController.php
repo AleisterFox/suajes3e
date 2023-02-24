@@ -92,14 +92,15 @@ class ProductionsController extends Controller
             'Doblez' => 'required',
             'Medida_perforado' => 'required',
             'Hule' => 'required',
+            'Img1' => 'required|image',
+            'Type' => 'required',
+            'Pleca_2000' => 'nullable',
+            'Profundidad_pleca_2000' => 'nullable',
             'Hule2' => 'nullable',
             'Hule3' => 'nullable',
             'Hule4' => 'nullable',
             'Hule5' => 'nullable',
-            'Img1' => 'required|image',
-            'Type' => 'required',
-            'Pleca_2000' => 'nullable',
-            'Profundidad_pleca_2000' => 'nullable'
+            'P_madera' => 'nullable'
         ]);
 
         $customers = Customer::all();
@@ -129,13 +130,29 @@ class ProductionsController extends Controller
         $production -> Doblez = $validData['Doblez'];
         $production -> Medida_perforado = $validData['Medida_perforado'];
         $production -> Hule = $validData['Hule'];
-        $production -> Hule = $validData['Hule2'];
-        $production -> Hule = $validData['Hule3'];
-        $production -> Hule = $validData['Hule4'];
-        $production -> Hule = $validData['Hule5'];
         $production -> Type = $validData['Type'];
         $production -> Pleca_2000 = $validData['Pleca_2000'];
         $production -> Profundidad_pleca_2000 = $validData['Profundidad_pleca_2000'];
+        if (array_key_exists('Hule2', $validData)) {
+            $production -> Hule2 = $validData['Hule2'];
+        }
+        
+        if (array_key_exists('Hule3', $validData)) {
+            $production -> Hule3 = $validData['Hule3'];
+        }
+        
+        if (array_key_exists('Hule4', $validData)) {
+            $production -> Hule4 = $validData['Hule4'];
+        }
+        
+        if (array_key_exists('Hule5', $validData)) {
+            $production -> Hule5 = $validData['Hule5'];
+        }
+
+        if(array_key_exists('P_madera', $validData)){
+            $production -> P_madera = $validData['P_madera'];
+        }
+
         
         if ($request->hasFile("Img1")){
             $trazo = $request->file("Img1");
@@ -175,6 +192,7 @@ class ProductionsController extends Controller
             'Hule3' => 'nullable',
             'Hule4' => 'nullable',
             'Hule5' => 'nullable',
+            'P_madera' => 'nullable',
             'Img1' => 'required',
             'Type' => 'required',
             'Pleca_2000' => 'nullable',
@@ -201,10 +219,11 @@ class ProductionsController extends Controller
         $production -> Doblez = $validData['Doblez'];
         $production -> Medida_perforado = $validData['Medida_perforado'];
         $production -> Hule = $validData['Hule'];
-        $production -> Hule = $validData['Hule2'];
-        $production -> Hule = $validData['Hule3'];
-        $production -> Hule = $validData['Hule4'];
-        $production -> Hule = $validData['Hule5'];
+        $production -> Hule2 = $validData['Hule2'];
+        $production -> Hule3 = $validData['Hule3'];
+        $production -> Hule4 = $validData['Hule4'];
+        $production -> Hule5 = $validData['Hule5'];
+        $production -> P_madera = $validData['P_madera'];
         $production -> Type = $validData['Type'];
         $production -> Pleca_2000 = $validData['Pleca_2000'];
         $production -> Profundidad_pleca_2000 = $validData['Profundidad_pleca_2000'];
@@ -227,6 +246,11 @@ class ProductionsController extends Controller
             'customers' => Customer::all()
         ]);
         return $pdf->stream();
+
+        // return view('productions.show',[
+        //     'production' => $production,
+        //     'customers' => Customer::all()
+        // ]);
     }
 
     /**

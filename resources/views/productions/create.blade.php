@@ -73,6 +73,15 @@
                                     <div class="input_box">
                                         <input type="text" class="form_control" id="S_plano" name="S_plano" value="{{old('S_plano')}}" hidden>   
                                     </div>
+
+                                    <div class="input_box">
+                                        <label for="P_madera" class="label">P.Madera(Paleta)</label>
+                                        <select name="P_madera" id="P_madera" class="form_control">
+                                            <option value="none">Seleccionar</option>
+                                            <option value="1">1</option>
+                                            <option value="1 1/4">1 1/4</option>
+                                        </select>
+                                    </div>
                                     
                 
                                     <div class="input_box">
@@ -184,8 +193,7 @@
                                     <textarea name="" id="" cols="30" rows="10" hidden></textarea>
 
                                     <div class="input_box">
-                                        <label for="Pleca_2000" class="label">Pleca 2000</label>
-                                        <select name="Pleca_2000" id="Pleca_2000" class="form_control">
+                                        <select name="Pleca_2000" id="Pleca_2000" class="form_control" hidden>
                                             <option value="">Seleccionar pleca 2000</option>
                                             <option value="N/A">N/A</option>
                                             <option value="3 Pts">3 Pts</option>
@@ -194,8 +202,7 @@
                                     </div>
 
                                     <div class="input_box">
-                                        <label for="Profundidad_pleca_2000" class="label">Profundidad pleca 2000</label>
-                                        <input type="text" name="Profundidad_pleca_2000" id="Profundidad_pleca_2000" class="form_control" value="{{old('Profundidad_pleca_2000')}}">
+                                        <input type="text" name="Profundidad_pleca_2000" id="Profundidad_pleca_2000" class="form_control" value="{{old('Profundidad_pleca_2000')}}" hidden>
                                     </div>
                                     
                                     <div class="input_box">

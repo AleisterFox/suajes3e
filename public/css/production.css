@@ -64,26 +64,58 @@ td {
 }
 
 
-.footer, .footer_header {
+.footer_header {
     border: 1px solid black;
+    border-bottom: none;
 }
-
 .footer_header tr .header {
     background-color: rgb(192, 190, 190);
+}
+/* Checklist de elementos */
+
+.footer {
+    border: 2px solid black;
+    border-bottom: none;
+    border-collapse: inherit;
+}
+.final {
+    border-top: none;
+    border-bottom: 2px solid black;
+}
+
+.footer td {
+    border: none;
+    width: 100px;
+    text-align: center;
+}
+
+.footer tr {
+    border: 1px solid black;
+    width: 100%;
+    padding-top: 5px;
 }
 
 .footer th {
     border: none;
-    border-bottom: 1px solid black;
+    width: 200px;
+    text-align: center;
 }
 
-.footer tr .first-left {
-    border-left: 1px solid black;
+.info {
+    width: 20px;
 }
 
-.footer tr .last-right {
-    border-left: none;
-    border-right: 1px solid black;
+.rellenar {
+    width: 20px !important;
+    height: 10px;
+    background-color: black;
+    border: 3px solid black;
+}
+
+.no-rellenar {
+    width: 20px !important;
+    height: 10px;
+    border: 3px solid black !important;
 }
 
 .firmas td {
