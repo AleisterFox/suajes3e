@@ -76,12 +76,6 @@
         </tr>
     </table>
 
-    <table class="trazos">
-        <td>
-            <img src= "{{asset($production->Img1)}}" >
-        </td>
-    </table>
-
     @if($production->Type == 1)
         <table class="footer_header">
             <tr>
@@ -91,165 +85,50 @@
             </tr>
         </table>
         <table class="footer">
-            @php
-                $corte = [
-                    "1" => "no-rellenar",
-                    "2" => "no-rellenar",
-                    "3" => "no-rellenar",
-                    "4" => "no-rellenar"
-                    ];
-                if($production->Corte == "990/970"){
-                    $corte[1] = "rellenar";
-                }
-                if($production->Corte == "1030/1030"){
-                    $corte[2] = "rellenar";
-                }
-                if($production->Corte == "1040/1030"){
-                    $corte[3] = "rellenar";
-                }
-                if($production->Corte == "1000/1000"){
-                    $corte[4] = "rellenar";
-                }
-            @endphp
             <tr>
-                <th rowspan="2" class="">Corte:</th>
-                <td id="990/970">990/970</td>
-                <td class="<?php echo $corte[1] ?>"></td>
-                <td id="1030/1030">1030/1030</td>
-                <td class="<?php echo $corte[2] ?>"></td>
+                <th>Corte:</th>
+                <td>{{$production->Corte}}</td>
+            
+                <th>Doblez:</th>
+                <td>{{$production->Doblez}}</td>
+            
+                <th>Perforado:</th>
+                <td>{{$production->Medida_perforado}}</td>
+            
+                <th>Calado:</th>
+                <td>{{$production->Calado}} pts</td>
+            
+                <th>P.Madera:</th>
+                <td>{{$production->P_madera}}</td>
             </tr>
             <tr>
-                <td id="1040/1030">1040/1030</td>
-                <td class="<?php echo $corte[3] ?>"></td>
-                <td>1000/1000</td>
-                <td class="<?php echo $corte[4] ?>"></td>
-            </tr>
-            <br>
-            @php
-                $doblez = [
-                    "1" => "no-rellenar",
-                    "2" => "no-rellenar",
-                    ];
-                if($production->Doblez == "860/850"){
-                    $doblez[1] = "rellenar";
-                }
-                if($production->Doblez == "860/850(8/4)"){
-                    $doblez[2] = "rellenar";
-                }
-            @endphp
-            <tr>
-                <th class="">Doblez:</th>
-                <td class="">860/850</td>
-                <td class="<?php echo $doblez[1] ?>"></td>
-                <td class="">860/850 (8/4)</td>
-                <td class="<?php echo $doblez[2] ?>"></td>
-            </tr>
-        </table>
-        <table class="footer">
-            @php
-                $perforado = [
-                    "1" => "no-rellenar",
-                    "2" => "no-rellenar",
-                    "3" => "no-rellenar",
-                    "4" => "no-rellenar",
-                    "5" => "no-rellenar"
-                    ];
-                if($production->Medida_perforado == "970"){
-                    $perforado[1] = "rellenar";
-                }
-                if($production->Medida_perforado == "1/2 x 1/2"){
-                    $perforado[2] = "rellenar";
-                }
-                if($production->Medida_perforado == "1/8 x 1/8"){
-                    $perforado[3] = "rellenar";
-                }
-                if($production->Medida_perforado == "1/4 x 1/4"){
-                    $perforado[4] = "rellenar";
-                }
-                if($production->Medida_perforado == "3/8 x 3/8"){
-                    $perforado[5] = "rellenar";
-                }
-            @endphp
-            <tr>
-                <th class="" rowspan="3">Perforado:</th>
-                <td class="">970</td>
-                <td class="<?php echo $perforado[1] ?>"></td>
-                <td class="">1/2x1/2</td>
-                <td class="<?php echo $perforado[2] ?>"></td>
+                <th>Hule1:</th>
+                <td>{{$production->Hule}}</td>
+
+                <th>Hule2:</th>
+                <td>{{$production->Hule2}}</td>
+
+                <th>Hule3:</th>
+                <td>{{$production->Hule3}}</td>
+
+                <th>Hule4:</th>
+                <td>{{$production->Hule4}}</td>
+
+                <th>Hule5:</th>
+                <td>{{$production->Hule5}}</td>
             </tr>
             <tr>
-                <td class="">1/8x1/8</td>
-                <td class="<?php echo $perforado[3] ?>"></td>
-                <td class="">1/4x1/4</td>
-                <td class="<?php echo $perforado[4] ?>"></td>
-            </tr>
-            <tr>
-                <td class="">3/8x3/8</td>
-                <td class="<?php echo $perforado[5] ?>"></td>
-            </tr>
-            <br>
-        </table>
-        <table class="footer final">
-                @php
-                    $hule = [
-                        "1" => "no-rellenar",
-                        "2" => "no-rellenar",
-                        "3" => "no-rellenar",
-                        "4" => "no-rellenar",
-                        "5" => "no-rellenar"
-                    ];
-                    if($production->Hule == "5/8 x 5/8 x 1 1/4" or $production->Hule2 == "5/8 x 5/8 x 1 1/4" or $production->Hule3 == "5/8 x 5/8 x 1 1/4" or $production->Hule4 == "5/8 x 5/8 x 1 1/4" or $production->Hule5 == "5/8 x 5/8 x 1 1/4"){
-                        $hule[1] = "rellenar";
-                    }
-                    if($production->Hule == "3/4 x 3/4 x 1 1/4" or $production->Hule2 == "3/4 x 3/4 x 1 1/4" or $production->Hule3 == "3/4 x 3/4 x 1 1/4" or $production->Hule4 == "3/4 x 3/4 x 1 1/4" or $production->Hule5 == "3/4 x 3/4 x 1 1/4"){
-                        $hule[2] = "rellenar";
-                    }
-                    if($production->Hule == "7/16 x 1/2 x 20" or $production->Hule2 == "7/16 x 1/2 x 20" or $production->Hule3 == "7/16 x 1/2 x 20" or $production->Hule4 == "7/16 x 1/2 x 20" or $production->Hule5 == "7/16 x 1/2 x 20"){
-                        $hule[3] = "rellenar";
-                    }
-                    if($production->Hule == "7/8 x 42 x 52" or $production->Hule2 == "7/8 x 42 x 52" or $production->Hule3 == "7/8 x 42 x 52" or $production->Hule4 == "7/8 x 42 x 52" or $production->Hule5 == "7/8 x 42 x 52"){
-                        $hule[4] = "rellenar";
-                    }
-                    if($production->Hule == "Kushion .315" or $production->Hule2 == "Kushion .315" or $production->Hule3 == "Kushion .315" or $production->Hule4 == "Kushion .315" or $production->Hule5 == "Kushion .315"){
-                        $hule[5] = "rellenar";
-                    }
-                @endphp
-            <tr>
-                <th class="" rowspan="3">Hule:</th>
-                <td class="">5/8x5/8x1 1/4</td>
-                <td class="<?php echo $hule[1] ?>"></td>
-                <td class="">3/4x3/4x1 1/4</td>
-                <td class="<?php echo $hule[2] ?>"></td>
-            </tr>
-            <tr>
-                <td class="">7/16x1/2x20</td>
-                <td class="<?php echo $hule[3] ?>"></td>
-                <td class="">7/8x42x52</td>
-                <td class="<?php echo $hule[4] ?>"></td>
-            </tr>
-            <tr>
-                <td class="">Kushion .315</td>
-                <td class="<?php echo $hule[5] ?> last-right"></td>
-            </tr>
-            <br>
-            @php
-                $madera = [
-                    "1" => "no-rellenar",
-                    "2" => "no-rellenar",
-                    ];
-                if($production->P_madera == "1 1/4"){
-                    $madera[1] = "rellenar";
-                }
-                if($production->P_madera == "1"){
-                    $madera[2] = "rellenar";
-                }
-            @endphp
-            <tr>
-                <th class="">P.Madera(Paleta)</th>
-                <td class="">1 1/4</td>
-                <td class="<?php echo $madera[1] ?>"></td>
-                <td class="">1</td>
-                <td class="<?php echo $madera[2] ?>"></td>
+                <th>M.Puentes</th>
+                <td></td>
+
+                <th>F.reduccion</th>
+                
+                @foreach ($machines as $machine)
+                    @if ($machine->Compañia == $production->Cliente)
+                    <td>{{$machine->Factor_reduccion}}</td>
+                    @endif
+                @endforeach
+                
             </tr>
         </table>
     @endif
@@ -263,140 +142,304 @@
             </tr>
         </table>
         <table class="footer">
-            @php
-                $corte = [
-                    "1" => "no-rellenar",
-                    "2" => "no-rellenar",
-                    "3" => "no-rellenar",
-                    "4" => "no-rellenar"
-                    ];
-                if($production->Corte == "990"){
-                    $corte[1] = "rellenar";
-                }
-                if($production->Corte == "937"){
-                    $corte[2] = "rellenar";
-                }
-                if($production->Corte == "1040"){
-                    $corte[3] = "rellenar";
-                }
-                if($production->Corte == "1000"){
-                    $corte[4] = "rellenar";
-                }
-            @endphp
             <tr>
-                <th rowspan="2" class="">Corte:</th>
-                <td>990</td>
-                <td class="<?php echo $corte[1] ?>"></td>
-                <td>937</td>
-                <td class="<?php echo $corte[2] ?>"></td>
+                <th>Corte:</th>
+                <td>{{$production->Corte}}</td>
+            
+                <th>Doblez:</th>
+                <td>{{$production->Doblez}}</td>
+            
+                <th>Perforado:</th>
+                <td>{{$production->Medida_perforado}}</td>
+            
+                <th>Calado:</th>
+                <td>{{$production->Calado}} pts</td>
+            
+                <th>P.Madera:</th>
+                <td>{{$production->P_madera}}</td>
             </tr>
-            <tr>
-                <td>1040</td>
-                <td class="<?php echo $corte[3] ?>"></td>
-                <td>1000</td>
-                <td class="<?php echo $corte[4] ?>"></td>
-            </tr>
-            <br>
-            @php
-                $doblez = [
-                    "1" => "no-rellenar",
-                    "2" => "no-rellenar",
-                    "3" => "no-rellenar"
-                    ];
-                if($production->Doblez == "860"){
-                    $doblez[1] = "rellenar";
-                }
-                if($production->Doblez == "890"){
-                    $doblez[2] = "rellenar";
-                }
-                if($production->Doblez == "906"){
-                    $doblez[3] = "rellenar";
-                }
-            @endphp
-            <tr>
-                <th rowspan="2">Doblez:</th>
-                <td>860</td>
-                <td class="<?php echo $doblez[1] ?>"></td>
-                <td>890</td>
-                <td class="<?php echo $doblez[2] ?>"></td>
-            </tr>
-            <tr>
-                <td>906</td>
-                <td class="<?php echo $doblez[3] ?>"></td>
-            </tr>
-        </table>
-        <table class="footer">
-            @php
-                $perforado = [
-                    "1" => "no-rellenar",
-                    "2" => "no-rellenar",
-                    "3" => "no-rellenar",
-                    "4" => "no-rellenar",
-                    ];
-
-                if($production->Medida_perforado == "1/2 x 1/2"){
-                    $perforado[1] = "rellenar";
-                }
-                if($production->Medida_perforado == "1/8 x 1/8"){
-                    $perforado[2] = "rellenar";
-                }
-                if($production->Medida_perforado == "1/4 x 1/4"){
-                    $perforado[3] = "rellenar";
-                }
-                if($production->Medida_perforado == "3/8 x 3/8"){
-                    $perforado[4] = "rellenar";
-                }
-            @endphp
-            <tr>
-                <th class="" rowspan="2">Perforado:</th>
-                <td class="">1/2x1/2</td>
-                <td class="<?php echo $perforado[1] ?>"></td>
-                <td class="">1/8x1/8</td>
-                <td class="<?php echo $perforado[2] ?>"></td>
-            </tr>
-            <tr>
-                <td class="">1/4x1/4</td>
-                <td class="<?php echo $perforado[3] ?>"></td>
-                <td class="">3/8x3/8</td>
-                <td class="<?php echo $perforado[4] ?>"></td>
-            </tr>
-            <br>
             <tr>
                 <th>Hule:</th>
-                <td class="">1/2x1/2x1 1/4</td>
-                <td class="rellenar"></td>
-            </tr>
-            <br>
-            @php 
-                $corte2 = [
-                    "1" => "no-rellenar",
-                    "2" => "no-rellenar",
-                    ];
+                <td>{{$production->Hule}}</td>
 
-                if($production->Pleca_2000 == "3 Pts"){
-                    $corte2[1] = "rellenar";
-                }
-                if($production->Pleca_2000 == "4 Pts"){
-                    $corte2[2] = "rellenar";
-                }
-            @endphp
-            <tr>
-                <th rowspan="2">Corte 2.00:</th>
-                <td>3pts</td>
-                <td class="<?php echo $corte2[1] ?>"></td>
-                <td>4pts</td>
-                <td class="<?php echo $corte2[2] ?>"></td>
-            </tr>
-            
-        </table>
-        <table class="footer final">
-            <tr>
-                <td>Profundidad de corte:</td>
-                <td class="info">{{$production->Profundidad_pleca_2000}}</td>
+                <th>Corte 2.00:</th>
+                <td>{{$production->Pleca_2000}}</td>
+
+                <th>Prof 2.00:</th>
+                <td>{{$production->Profundidad_pleca_2000}}</td>
+
+                <th>M.Puentes:</th>
+                <td></td>
+
+                <th>F.reducc:</th>
+                
+                @foreach ($machines as $machine)
+                    @if ($machine->Compañia == $production->Cliente)
+                    <td>{{$machine->Factor_reduccion}}</td>
+                    @endif
+                @endforeach
             </tr>
         </table>
         
     @endif
+
+    <table class="trazos">
+        <td>
+            <img src= "{{asset($production->Img1)}}" >
+        </td>
+    </table>
+
+    <table class="footer_header">
+        <tr>
+            <th class="header">
+                Verificacion del proceso
+            </th>
+        </tr>
+    </table>
+    <div class="table-wrapper">
+        
+        <table class="t1">
+            <tr class="head">
+                <th colspan=4>PLOTEADO</th>
+            </tr>
+            <tr>
+                <th class="espacio"></th>
+                <td>Si</td>
+                <td>No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Dimensiones</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Acomodo</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Lineas</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>F.reduccion</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+            </tr>
+        </table>
+        <table class="t1">
+            <tr class="head">
+                <th colspan=4>CALADO</th>
+            </tr>
+            <tr>
+                <th class="espacio"></th>
+                <td>Si</td>
+                <td>No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Tipo suaje</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Calado(3-4 pts)</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Dimension puentes</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Lineas rectas</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Lineas caladas</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+            </tr>
+        </table>
+        <table class="t1">
+            <tr class="head">
+                <th colspan=4>PLECADO</th>
+            </tr>
+            <tr>
+                <th class="espacio"></th>
+                <td>Si</td>
+                <td>No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Altura pleca</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Tamaño puentes</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Plecas asentadas</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Uniones cerradas</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Plecas derechas</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td style="color:#fff;" colspan="4">hola</td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+            </tr>
+            
+        </table>
+        <table class="t1">
+            <tr class="head">
+                <th colspan=4>ENGOMADO</th>
+            </tr>
+            <tr>
+                <th class="espacio"></th>
+                <td>Si</td>
+                <td>No</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>1/2x1/2x1 1/4</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>3/4x3/4x1 1/4</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>7MMX"9x18"</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>5/8x5/8x1 1/4</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Kushion 0.315</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>7/16x1/2x20</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>7/8x42x52</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>Hules pegados</th>
+                <td class="no-rellenar"></td>
+                <td class="no-rellenar"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td colspan="4"></td>
+            </tr>
+        </table>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>

@@ -85,8 +85,9 @@ td {
 
 .footer td {
     border: none;
-    width: 100px;
-    text-align: center;
+    max-width: 88px;
+    text-align: left;
+    font-size: small;
 }
 
 .footer tr {
@@ -97,25 +98,62 @@ td {
 
 .footer th {
     border: none;
-    width: 200px;
+    padding: 0;
+    max-width: 50px;
+    text-align: left;
+    font-size: small;
+}
+
+.table-wrapper {
+    width: 100%;
+}
+
+.table-wrapper table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.t1 {
+    width: 25%;
+    float: left;
+    min-height: 200px;
+}
+
+.t1 th{
+    border:none;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: small;
+}
+
+.t1 .head th {
+    border: 1px solid black;
     text-align: center;
+    padding: 0;
+    height: 50px;
+}
+
+.t1 td {
+    border: none;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+.t1 .espacio {
+    border: none;
+    width: 80%;
 }
 
 .info {
     width: 20px;
 }
 
-.rellenar {
-    width: 20px !important;
-    height: 10px;
-    background-color: black;
-    border: 3px solid black;
-}
-
 .no-rellenar {
-    width: 20px !important;
-    height: 10px;
-    border: 3px solid black !important;
+    min-width: 20px !important;
+    height: 10px !important;
+    border: 2px solid black !important;
+    padding: 0 !important;
+    max-width: 21px !important;
 }
 
 .firmas td {

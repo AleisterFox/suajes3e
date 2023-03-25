@@ -243,13 +243,15 @@ class ProductionsController extends Controller
     {
         $pdf = PDF::loadView('productions.show',[
             'production' => $production,
-            'customers' => Customer::all()
+            'customers' => Customer::all(),
+            'machines' => Machine::all()
         ]);
         return $pdf->stream();
 
         // return view('productions.show',[
         //     'production' => $production,
-        //     'customers' => Customer::all()
+        //     'customers' => Customer::all(),
+        //     'machines' => Machine::all()
         // ]);
     }
 
