@@ -100,6 +100,10 @@
                                 
                                     
                                     <div class="finish_data">
+                                        <div class="input_box" style="margin-right:10px;">
+                                            <label for="Receptor" class="label">Dirigido a</label>
+                                            <input type="text" class="form_control" name="Receptor" id="Receptor" value="{{old('Receptor')}}">
+                                        </div>
                                         <!-- Trazo de suaje -->
                                         <div class="input_box file-select">
                                             <span class="Img1">

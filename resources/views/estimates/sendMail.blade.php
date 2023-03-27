@@ -15,8 +15,12 @@
                         <form action="/customer/{{$id}}/estimates/{{$ids}}" method="post" class="">
                             @csrf
                             <div class="input_box">
-                                <label for="email" class="label">Destinatario</label>
+                                <label for="email" class="label">Destinatario:</label>
                                 <input type="email" name="email" id="email" class="form_control">
+                            </div>
+                            <div class="input_box">
+                                <label for="cc" class="label">Cc:</label>
+                                <input type="email" name="cc" id="cc" class="form_control">
                             </div>
                             <br>
                             <button type="submit" class="buttn buttn-success">Enviar Cotizacion</button>

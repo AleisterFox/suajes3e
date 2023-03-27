@@ -487,7 +487,7 @@ input[type=file]#Img1{
 }
 
 label[for="Img1"]{
-  height:37px;
+  height:50px;
   font-size: 14px;
   width: 185px;
   border-radius: 5px;
@@ -495,7 +495,7 @@ label[for="Img1"]{
   background-color: #106BA0;
   transition: all .5s;
   cursor: pointer;
-  padding: 5px 40px !important;
+  padding: 15px 40px !important;
 }
 
 input[type=file]#Img2{
@@ -516,7 +516,7 @@ label[for="Img2"]{
   background-color: #106BA0;
   transition: all .5s;
   cursor: pointer;
-  padding: 5px 40px !important;
+  padding: 15px 40px !important;
 }
 
 input[type=file]#Img3{
@@ -537,7 +537,7 @@ label[for="Img3"]{
   background-color: #106BA0;
   transition: all .5s;
   cursor: pointer;
-  padding: 5px 40px !important;
+  padding: 15px 40px !important;
 }
 
 input[type=file]#Img4{
@@ -558,7 +558,7 @@ label[for="Img4"]{
   background-color: #106BA0;
   transition: all .5s;
   cursor: pointer;
-  padding: 5px 40px !important;
+  padding: 15px 40px !important;
 }
 
 input[type=file]#Img5{
@@ -579,7 +579,7 @@ label[for="Img5"]{
   background-color: #106BA0;
   transition: all .5s;
   cursor: pointer;
-  padding: 5px 40px !important;
+  padding: 15px 40px !important;
 }
 
 .bx-upload {

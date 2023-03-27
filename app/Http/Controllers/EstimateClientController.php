@@ -86,7 +86,8 @@ class EstimateClientController extends Controller
             'S5' => 'nullable',
             'Img3' => 'nullable|image',
             'Img4' => 'nullable|image',
-            'Img5' => 'nullable|image'
+            'Img5' => 'nullable|image',
+            'Receptor' => 'required'
         ]);
 
         $estimate = new Estimate();
@@ -115,6 +116,7 @@ class EstimateClientController extends Controller
         $estimate -> S4 = $validData['S4'];
         $estimate -> Sj5 = $validData['Sj5'];
         $estimate -> S5 = $validData['S5'];
+        $estimate -> Receptor = $validData['Receptor'];
   
 
         if ($request->hasFile("Img1")){
@@ -240,12 +242,19 @@ class EstimateClientController extends Controller
         
 
         $validData = $request -> validate ([
-            'email' => 'required|email'
+            'email' => 'required|email',
+            'cc' => 'nullable'
         ]);
 
         $destinatario = $validData['email'];
+        $concopia = $validData['cc'];
 
         $correo = new estimatesMailable($id,$ids);
+
+        if ($concopia) {
+            $correo -> cc($concopia);
+        }
+
         Mail::to($destinatario)->send($correo);
 
         return redirect('/estimates');

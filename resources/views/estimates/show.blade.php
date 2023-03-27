@@ -40,7 +40,7 @@
         </tr>
         <tr>
             <th>Atencion: &nbsp;</th>
-            <td>A quien corresponda</td>
+            <td>{{$estimate->Receptor}}</td>
         </tr>
     </table>
 
@@ -109,7 +109,7 @@
             <td>{{$iva}}</td>
         </tr>
         <tr>
-            <td class="no-margin">Total: </td>
+            <td class="no-margin">Total (MXN): </td>
             @php 
                 $total = $St + $iva
             @endphp
