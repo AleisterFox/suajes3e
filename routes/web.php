@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('home');
 })-> middleware('auth');
 
+Route::get('/test', function() {
+    return view('main');
+});
+
 /* CUSTOMERS */
 Route::resource('/customers', \App\Http\Controllers\CustomerController::class) -> middleware('auth');
 Route::get('/customers/{ids}/machines/select', 
