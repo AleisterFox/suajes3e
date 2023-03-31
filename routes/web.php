@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/invoices/templates',\App\Http\Controllers\InvoiceTemplateController::class)-> middleware('auth');
 
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 })-> middleware('auth');
 
-Route::get('/test', function() {
+Route::get('/', function() {
     return view('main');
 });
 

@@ -53,8 +53,15 @@
             
             <li class="nav-item">
               <a class="nav-link nav-link-icon" href="{{route ('login')}}">
-                <i class="ni ni-key-25"></i>
-                <span class="nav-link-inner--text">Login</span>
+                <i class="ni ni-key-25" style="font-weight:bolder;"></i>
+                <span class="nav-link-inner--text" style="font-weight:bolder;">Login</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="/">
+                <i class="ni ni-app" style="font-weight:bolder;"></i>
+                <span class="nav-link-inner--text" style="font-weight:bolder;">Home</span>
               </a>
             </li>
             

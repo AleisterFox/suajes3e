@@ -25,7 +25,7 @@ body {
 :target:before {
     content:"";
     display:block;
-    height:100px; /* ajustar este valor para que coincida con la altura de tu barra de navegación */
+    height:90px; /* ajustar este valor para que coincida con la altura de tu barra de navegación */
 }
 
 /* Estilos generales */
@@ -150,7 +150,6 @@ nav a:hover {
     to {
         opacity: 0;
     }
-    
 }
   
   /* Media query para dispositivos móviles */
@@ -165,7 +164,7 @@ nav a:hover {
         position: absolute;
         top: 80px;
         right: 10px;
-        width: 20%;
+        width: 35%;
         border-radius: 5px;
         background: linear-gradient(to bottom, #cf0000ce, #e66c0fd4);
         box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.1);
@@ -182,7 +181,7 @@ nav a:hover {
     }
   
     .nav-list li a {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     nav a:hover {
@@ -231,10 +230,25 @@ nav a:hover {
 
 }  
 
+h1{
+    position: absolute;
+    top: 250px;
+    font-size: 150px;
+    width: 100%;
+    color: #f0d508ae;
+    text-align: center;
+}
 
+@media screen and (max-width: 769px) {
+    h1 {
+        font-size: 60px;
+        top: 270px;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
 
-
-
+    }
+}
 
 /* HERO */
 
@@ -246,16 +260,16 @@ nav a:hover {
     position: relative;
 }
 
-.hero::before {
+.hero::before{
     content: "";
     display: block;
-    height: 93px;
+    height: 0px;
 }
 
 .slider {
     display: flex;
-    width: 400%;
-    height: 400px;
+    width: 500%;
+    height: 580px;
     margin-left: -100%;
 }
 
@@ -317,7 +331,7 @@ nav a:hover {
 
 /* Estilos para la sección SERVICES */
 .services {
-    padding: 30px 0;
+    padding: 25px 0;
 }
 
 .services__container {
@@ -393,9 +407,23 @@ nav a:hover {
 /* Media queries para dispositivos móviles */
 
 @media screen and (max-width: 768px) {
+    .services__container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .services__container p {
+        padding: 20px;
+    }
+
     .service {
-        width: 100%;
+        width: 85%;
+        margin: 0;
         margin-bottom: 50px;
+    }
+
+    .service__title {
+        font-size: 2rem;
     }
 
     .service__description {
@@ -407,8 +435,12 @@ nav a:hover {
     }
     
     .gallery__image {
-        width: calc(50% - 5px);
+        width: 100%;
     }
+
+    .gallery__image:hover {
+    transform: none;
+}
 }
 
 /* ABOUT US */
@@ -435,38 +467,38 @@ nav a:hover {
 
 @media screen and (max-width: 768px) {
   .about-us__container {
-      padding: 0;
+      padding: 20px;
   }
 
   .about-us p {
-      font-size: 1rem;
+      font-size: 1.1rem;
   }
 }
 
 /* TESTIMONIALS */
 
-.testimonials {
+.customers {
     background-color: #eee;
-    padding: 80px 0;
+    padding: 45px 0;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
 }
 
-.testimonials-container {
+.customers-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
   
-.testimonials h2 {
+.customers h2 {
     font-size: 36px;
     margin-bottom: 40px;
     text-align: center;
 }
 
-.testimonial-item {
+.customer-item {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -476,12 +508,12 @@ nav a:hover {
     border: 3px solid #ff8c53;
 }
 
-.testimonial-item img {
+.customer-item img {
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
-.testimonial-item q {
+.customer-item q {
     font-size: 20px;
     margin-bottom: 10px;
     text-align: center;
@@ -489,40 +521,41 @@ nav a:hover {
 
 }
 
-.testimonial-item cite {
+.customer-item cite {
     margin-top: 10px;
     text-align: right;
 }
-
+  
 @media screen and (max-width: 768px) {
-    .testimonial-item {
-      max-width: 100%;
+    .customers-container {
+        padding: 20px;
     }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .testimonial-item {
-      margin: 10px;
-      padding: 10px;
-    }
-  
-    .testimonial-item img {
-      width: 80px;
-      height: 80px;
+
+    .customer-item {
+        max-width: 100%;
+        min-height: 2vh;
+        margin: 10px;
+        
     }
   
-    .testimonial-item p {
+    .customer-item img {
+      min-width: 2rem;
+      min-height: 2rem;
+    }
+  
+    .customer-item p {
       font-size: 14px;
     }
   
-    .testimonial-item q {
+    .customer-item q {
       font-size: 18px;
     }
   
-    .testimonial-item cite {
+    .customer-item cite {
       font-size: 14px;
     }
-  }
+}
+
 
 /* CONTACTANOS */
 
@@ -663,7 +696,6 @@ nav a:hover {
 }
 
 
-
 @keyframes bounce{
     0%{
       
@@ -684,36 +716,22 @@ nav a:hover {
     }
 }
 
-@media only screen and (max-width: 481px) {
-    /* Ajuste el tamaño del título principal */
-    .title {
-        font-size: 32px;
-    }
-  
-    /* Ajuste el tamaño del subtítulo */
-    #title-Tag-Line {
-        font-size: 18px;
-    }
-  
-    /* Ajuste el tamaño del formulario */
-    .form {
-        width: 80%;
-    }
-  
-    /* Ajuste el tamaño de los inputs del formulario */
-    .name, .email, .message {
-        width: 80%;
-    }
-  
-    /* Ajuste el tamaño del botón de envío del formulario */
-    .submit {
-        width: 70%;
-    }
-}
   
   /* Para tablets en orientación horizontal y ordenadores de baja resolución */
   
 @media only screen and (max-width: 769px) {
+
+    :target::before{
+        content: "";
+        display: block;
+        height: 0px;
+    }
+    
+    .contact-us {
+        padding-top:30px;
+        margin-bottom: 50px;
+    }
+
     /* Ajuste el tamaño del título principal */
     .title {
         font-size: 42px;
@@ -726,81 +744,92 @@ nav a:hover {
   
     /* Ajuste el tamaño del formulario */
     .form {
-        width: 60%;
+        width: 80%;
+        max-height: 60%;
     }
   
     /* Ajuste el tamaño de los inputs del formulario */
     .name, .email, .message {
-        width: 60%;
+        width: 70%;
     }
   
     /* Ajuste el tamaño del botón de envío del formulario */
     .submit {
         width: 50%;
     }
-}
-  
-  /* Para ordenadores de alta resolución */
-  
-@media only screen and (max-width: 1200px) {
-    /* Ajuste el tamaño del título principal */
-    .title {
-        font-size: 56px;
-    }
-  
-    /* Ajuste el tamaño del subtítulo */
-    #title-Tag-Line {
-        font-size: 24px;
-    }
-  
-    /* Ajuste el tamaño del formulario */
-    .form {
-        width: 50%;
-    }
-  
-    /* Ajuste el tamaño de los inputs del formulario */
-    .name, .email, .message {
-        width: 50%;
-    }
-  
-    /* Ajuste el tamaño del botón de envío del formulario */
-    .submit {
-        width: 40%;
-    }
-}
 
+    .name:hover, .email:hover{
+        width: 90%;
+    }
+
+    .message:hover {
+        width: 90%;
+    }
+}
 
 /* FOOTER */
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    font-size: 14px;
-    height: 50px;
+    background: linear-gradient(to right, #FF834E, #CF0000);
+    color: white;
+    padding: 1rem;
+  }
+  
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer__container-copy p {
+    margin: 6px 0;
+    font-style: bolder;
+  }
+
+  .footer__container-copy p:nth-child(2) {
+    margin-bottom: -5px;
+}
+
+.footer__container-copy p:nth-child(1) {
+    margin-top: -5px;
 }
   
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+  .footer_container-rrss {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+  }
   
-p {
-    margin: 10px 0;
-}
+  .footer_container-rrss a {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
   
-a {
-    color: #fff;
-    text-decoration: none;
-}
+  .footer_container-rrss i {
+    transition: all 0.3s ease;
+  }
   
-a:hover {
-    text-decoration: underline;
-}
+  .footer_container-rrss i:hover {
+    transform: scale(1.2);
+  }
   
-@media screen and (max-width: 768px) {
-    footer {
-      font-size: 12px;
+  @media (max-width: 768px) {
+    .footer_container-rrss {
+      justify-content: flex-start;
     }
-}
+  
+    .footer_container-rrss {
+      margin: 0 auto;
+      margin-top: 5px;
+    }
+  
+    .footer__container-copy p:nth-child(2) {
+      display: none;
+    }
+  }
+  
   
