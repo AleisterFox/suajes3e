@@ -47,14 +47,14 @@ menuBtn.addEventListener("click", () => {
 		}, 900);
         setTimeout(function() {
             menuBurguer.classList.toggle("active");
-        },500);
+        },300);
     }
     else{
         menuBurguer.classList.toggle("active");
-		navList.style.animation = "appear 1.5s";
+		navList.style.animation = "appear 1s";
         setTimeout(function() {
             navList.classList.add("active");
-        },500);
+        },400);
 
 		
     }
