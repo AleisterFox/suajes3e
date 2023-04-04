@@ -441,15 +441,17 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
     <table class="firmas">
         <tr>
+            <td>_____________________________________________</td>
+            <td>_____________________________________________</td>
+            <td>_____________________________________________</td>
+            <td>_____________________________________________</td>
+        </tr>
+        <tr>    
+            <td class="firma">PLOTEADO</td>
             <td class="firma">CALADO</td>
-            <td>&nbsp; &nbsp;</td>
             <td class="firma">PLECADO</td>
-            <td>&nbsp; &nbsp;</td>
             <td class="firma">ENGOMADO</td>
         </tr>
     </table>

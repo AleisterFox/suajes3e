@@ -246,6 +246,7 @@ class ProductionsController extends Controller
             'customers' => Customer::all(),
             'machines' => Machine::all()
         ]);
+            $pdf -> setPaper ('sra3','landscape'); //renderiza en horizontal
         return $pdf->stream();
 
         // return view('productions.show',[
