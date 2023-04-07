@@ -1,9 +1,9 @@
 @extends('layouts.panel')
 
-@section('title','Nuevo item')
+@section('title','Nueva produccion')
 
 @section('brand')
-<a class="h1 mb-0 text-white text-uppercase d-none d-lg-inline-block">Nuevo item</a>
+<a class="h1 mb-0 text-white text-uppercase d-none d-lg-inline-block">Nueva produccion</a>
 @endsection
 
 @section('content')
@@ -108,6 +108,11 @@
                                                 <option value="{{$machine->Marca_maquina}}">{{$machine->Marca_maquina}}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+
+                                    <div class="input_box">
+                                        <label for="M_puentes">Madera puentes</label>
+                                        <input type="text" id="M_puentes" name="M_puentes" class="form_control">
                                     </div>
                 
                                     <div class="input_box">

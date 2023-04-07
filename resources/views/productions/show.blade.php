@@ -118,8 +118,8 @@
                 <td>{{$production->Hule5}}</td>
             </tr>
             <tr>
-                <th>M.Puentes</th>
-                <td></td>
+                <th>M.Puentes:</th>
+                <td>{{$production->M_puentes}}</td>
 
                 <th>F.reduccion</th>
                 
@@ -169,7 +169,7 @@
                 <td>{{$production->Profundidad_pleca_2000}}</td>
 
                 <th>M.Puentes:</th>
-                <td></td>
+                <td>{{$production->M_puentes}}</td>
 
                 <th>F.reducc:</th>
                 
@@ -449,7 +449,7 @@
             <td>_____________________________________________</td>
         </tr>
         <tr>    
-            <td class="firma">PLOTEADO</td>
+            <td class="firma">DISEÑADO</td>
             <td class="firma">CALADO</td>
             <td class="firma">PLECADO</td>
             <td class="firma">ENGOMADO</td>

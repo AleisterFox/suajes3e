@@ -100,7 +100,8 @@ class ProductionsController extends Controller
             'Hule3' => 'nullable',
             'Hule4' => 'nullable',
             'Hule5' => 'nullable',
-            'P_madera' => 'nullable'
+            'P_madera' => 'nullable',
+            'M_puentes' => 'required'
         ]);
 
         $customers = Customer::all();
@@ -133,6 +134,7 @@ class ProductionsController extends Controller
         $production -> Type = $validData['Type'];
         $production -> Pleca_2000 = $validData['Pleca_2000'];
         $production -> Profundidad_pleca_2000 = $validData['Profundidad_pleca_2000'];
+        $production -> M_puentes = $validData['M_puentes'];
         if (array_key_exists('Hule2', $validData)) {
             $production -> Hule2 = $validData['Hule2'];
         }
@@ -188,15 +190,16 @@ class ProductionsController extends Controller
             'Doblez' => 'required',
             'Medida_perforado' => 'required',
             'Hule' => 'required',
+            'Img1' => 'required',
+            'Type' => 'required',
+            'Pleca_2000' => 'nullable',
+            'Profundidad_pleca_2000' => 'nullable',
             'Hule2' => 'nullable',
             'Hule3' => 'nullable',
             'Hule4' => 'nullable',
             'Hule5' => 'nullable',
             'P_madera' => 'nullable',
-            'Img1' => 'required',
-            'Type' => 'required',
-            'Pleca_2000' => 'nullable',
-            'Profundidad_pleca_2000' => 'nullable'
+            'M_puentes' => 'required'
         ]);
 
         $production = new Production();
@@ -227,7 +230,7 @@ class ProductionsController extends Controller
         $production -> Type = $validData['Type'];
         $production -> Pleca_2000 = $validData['Pleca_2000'];
         $production -> Profundidad_pleca_2000 = $validData['Profundidad_pleca_2000'];
-
+        $production -> M_puentes = $validData['M_puentes'];
         $production -> Img1 = $validData['Img1'];
         $production -> save();
         return redirect('/productions');

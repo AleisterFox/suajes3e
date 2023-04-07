@@ -421,9 +421,57 @@ h1{
     transition: all 0.4s ease-in-out;
 }
 
+.services_images {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 85%;
+}
+
+.services_images--item {
+    width: calc(20% - 10px);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.services_images--item p {
+    font-size: 15px;
+    text-align: justify;
+    margin: 0;
+    padding: 0 !important;
+}
+
+.services_images--item img {
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+}
+
+.services_images--item h3 {
+    color:rgb(220, 97, 16);
+    margin-bottom: 5px;
+}
+
 /* Media queries para dispositivos móviles */
 
 @media screen and (max-width: 768px) {
+
+    .services_images--item {
+        width: calc(50% - 50px);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 50%;
+    }
+
+    .services_images--item img {
+        object-fit: cover;
+        width: 100%;
+        min-height: 49%;
+    }
+
     .services__container {
         align-items: center;
         justify-content: center;

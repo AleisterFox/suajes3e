@@ -68,13 +68,36 @@
                 <h2 class="services__title">Nuestros Servicios</h2>
                 <p class="services_description">Suajes3E se especializa en:</p>
                 <ol class="services_description">
-                    <li>La fabricación de suajes Planos y Rotativos, en calado manual.</li>
+                    <li>La fabricación de suajes Planos y Rotativos, en calado manual.
+                    Utilizando materiales e insumos con altos estándares de calidad a nivel mundial, en su mayoría de importación
+                    </li>
                     <li>Asesoría y diseño del suaje mediante software de vanguardia acorde a los requerimientos de nuestros clientes.​</li>
                     <li>Asesoría y diseño de clichés de impresión en placa digital.​</li>
-                    <li>Utilizamos materiales e insumos con altos estándares de calidad a nivel mundial, en su mayoría de importación​</li>
                     <li>Como una ventaja competitiva hacia nuestros clientes, la asistencia técnica personalizada en el área de producción y cartón.​</li>
                     <li>Desarrollo en diseño de proyectos de empaque.​</li>
                 </ol>
+                <div class="services_images">
+                    <div class="services_images--item">
+                        <h3>Fabricacion</h3>
+                        <img src="{{asset('/img/landing/Fabricacion.png')}}" alt="Suaje plano y rotativo">
+                        <p>Fabricacion de suajes planos y rotativos.</p>
+                    </div>
+                    <div class="services_images--item">
+                        <h3>Asesoria y Diseño</h3>
+                        <img src="{{asset('/img/landing/Asesorias.png')}}" alt="diseño de cliche">
+                        <p>Asesoría y diseño de clichés de impresión en placa digital. Así como del suaje, mediante software de vanguardia acorde a los requerimientos de nuestros clientes.</p>
+                    </div>
+                    <div class="services_images--item">
+                        <h3>Asistencia Tecnica</h3>
+                        <img src="{{asset('/img/landing/Asistencia_tecnica.png')}}" alt="Asistencia tecnica">
+                        <p>Como una ventaja competitiva hacia nuestros clientes, la asistencia técnica personalizada en el área de producción y cartón.</p>
+                    </div>
+                    <div class="services_images--item">
+                        <h3>Diseño de proyectos</h3>
+                        <img src="{{asset('/img/landing/Desarrollo_proyectos.png')}}" alt="imagen de negociacion">
+                        <p>Desarrollo en diseño de proyectos de empaque.</p>
+                    </div>
+                </div>
                 <div class="service mr">
                     <h3 class="service__title">Suajes</h3>
                     <p class="service__description">Es una pieza de madera con reglas de metal incrustadas, las cuales tienen bordes de corte y/o doblez. Contiene hule botador (que ayuda a que el cartón sea expulsado de las figuras de corte). En Suajes3E, nos especializamos en 2 tipos de suajes, tales como:</p>
@@ -88,7 +111,6 @@
                         <img class="gallery__image" src="{{asset('img/landing/suajeplano.jpeg')}}" alt="Suaje Plano" />
                     </div>
                 </div>
-
                 <div class="service ml">
                     <h3 class="service__title">CLICHÉS DE IMPRESIÓN PARA CARTON</h3>
                     <p class="service__description">El cliché para impresión es una pieza fabricada en goma con forma de placa, esta pieza se ocupa de recabar la tinta de otra bobina cargada y la superficie en relieve del cliché la recoge y estampa el diseño en la caja o en el producto escogido. En Suajes3E nos especializamos en diseñar el cliché ideal para su empaque.</p>

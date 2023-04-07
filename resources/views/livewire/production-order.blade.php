@@ -232,6 +232,10 @@
                                                             <option value="7/8 x 42 x52">7/8 x 42 x52</option>
                                                         </select>
                                                     </div>
+                                                    <div class="input_box">
+                                                        <label for="M_puentes" class="label">Madera Puentes</label>
+                                                        <input type="text" id="M_puentes" name="M_puentes" class="form_control">
+                                                    </div>
                                                 </div>
                                             </td>
                                         @endif
@@ -335,6 +339,7 @@
                                                         <select name="Hule" id="Hule" class="form_control">
                                                             <option value="none">Select an option</option>
                                                             <option value="1/2 x 1/2 x 1 1/4">1/2 x 1/2 x 1 1/4</option>
+                                                            <option value="7mm '9x18'">7mm '9x18'</option>
                                                         </select>
                                                     </div>
                                                     <div class="input_box">
@@ -348,6 +353,10 @@
                                                     <div class="input_box">
                                                         <label for="Profundidad_pleca_2000" class="label">Profundidad pleca2000</label>
                                                         <input type="text" id="Profundidad_pleca_2000" name="Profundidad_pleca_2000" class="form_control" value="{{old('Profundidad_pleca_2000')}}">
+                                                    </div>
+                                                    <div class="input_box">
+                                                        <label for="M_puentes" class="label">Madera Puentes</label>
+                                                        <input type="text" id="M_puentes" name="M_puentes" class="form_control">
                                                     </div>
                                                 </div>
                                             </td>
