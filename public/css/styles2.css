@@ -364,7 +364,7 @@ h1{
 }
 
 .services__container p {
-    margin-bottom: 30px !important;
+    margin-bottom: 50px;
     font-size: 20px;
 }
 
@@ -421,42 +421,74 @@ h1{
     transition: all 0.4s ease-in-out;
 }
 
-.services_images {
-
+.services_images {  
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 85%;
+    max-height: 250px;
+    margin-bottom: 50px;
 }
 
 .services_images--item {
-    width: calc(20% - 10px);
+    width: calc(18% - 10px);
+    aspect-ratio: 1/1;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 10px;
 }
 
 .services_images--item p {
-    font-size: 15px;
-    text-align: justify;
-    margin: 0;
-    padding: 0 !important;
+    position: relative;
+    bottom: -50px; /* Posición inicial debajo de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+    color: white;
+    font-size: 0.7rem;
+    transition: all 0.3s ease-in-out;
+    opacity: 0; /* El elemento estará oculto inicialmente */
 }
+  
+.services_images--item:hover p {
+    bottom: 20px; /* Posición al hacer hover */
+    opacity: 1;
+}
+
 
 .services_images--item img {
     object-fit: cover;
     width: 100%;
-    height: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 4px solid rgb(220, 97, 16);
+    margin-bottom: 20px;
+}
+
+.services_images--item:hover {
+    transform: scale(1.3);
+    transition: all 0.5s ease-in-out;
 }
 
 .services_images--item h3 {
     color:rgb(220, 97, 16);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-right: -20px;
+    width: 102%;
+    font-size: small;
+
 }
 
 /* Media queries para dispositivos móviles */
 
 @media screen and (max-width: 768px) {
+
+    .services_images {
+        max-height: 1200px !important;
+        margin-bottom: 20px;
+    }
 
     .services_images--item {
         width: calc(50% - 50px);
@@ -478,8 +510,8 @@ h1{
     }
 
     .services__container p {
-        padding: 20px;
-    }
+        margin-bottom: 10px;
+    } 
 
     .service {
         width: 85%;
@@ -489,22 +521,37 @@ h1{
 
     .service__title {
         font-size: 2rem;
+        text-align: left;
     }
 
-    .service__description {
-        margin-bottom: 0px;
+    .services__title {
+        margin: 0;
+    }
+
+    .service ul {
+        margin-top: 20px;
+        font-size: medium;
+    }
+
+    .service p {
+        font-size: medium;
+    }
+
+    .services_description {
+        text-align: center;
+        width: 100%;
+        padding: 0 !important;
+        padding-top: 20px !important;
+        margin-bottom: 20px !important;
     }
 
     .gallery {
         justify-content: center;
     }
     
-    .gallery__image {
-        width: 100%;
-    }
 
     .gallery__image:hover {
-    transform: none;
+    transform: scale(1.5);
 }
 }
 

@@ -67,35 +67,31 @@
             <div class="services__container">
                 <h2 class="services__title">Nuestros Servicios</h2>
                 <p class="services_description">Suajes3E se especializa en:</p>
-                <ol class="services_description">
-                    <li>La fabricación de suajes Planos y Rotativos, en calado manual.
-                    Utilizando materiales e insumos con altos estándares de calidad a nivel mundial, en su mayoría de importación
-                    </li>
-                    <li>Asesoría y diseño del suaje mediante software de vanguardia acorde a los requerimientos de nuestros clientes.​</li>
-                    <li>Asesoría y diseño de clichés de impresión en placa digital.​</li>
-                    <li>Como una ventaja competitiva hacia nuestros clientes, la asistencia técnica personalizada en el área de producción y cartón.​</li>
-                    <li>Desarrollo en diseño de proyectos de empaque.​</li>
-                </ol>
                 <div class="services_images">
+                    <div class="services_images--item">
+                        <h3>Asesoria y Diseño</h3>
+                        <img src="{{asset('/img/landing/Asesorias.jpeg')}}" alt="diseño de cliche">
+                        <p>Asesoría y diseño de clichés de impresión en placa digital. Así como del suaje, mediante software de vanguardia acorde a los requerimientos de nuestros clientes.</p>
+                    </div>
+                    <div class="services_images--item">
+                        <h3>Trato Directo</h3>
+                        <img src="{{asset('/img/landing/trato_directo.jpg')}}" alt="Imagen de hombre haciendo trato">
+                        <p>Contacto directo con nuestro director y asesor.</p>
+                    </div>
                     <div class="services_images--item">
                         <h3>Fabricacion</h3>
                         <img src="{{asset('/img/landing/Fabricacion.png')}}" alt="Suaje plano y rotativo">
                         <p>Fabricacion de suajes planos y rotativos.</p>
                     </div>
                     <div class="services_images--item">
-                        <h3>Asesoria y Diseño</h3>
-                        <img src="{{asset('/img/landing/Asesorias.png')}}" alt="diseño de cliche">
-                        <p>Asesoría y diseño de clichés de impresión en placa digital. Así como del suaje, mediante software de vanguardia acorde a los requerimientos de nuestros clientes.</p>
+                        <h3>Diseño de proyectos</h3>
+                        <img src="{{asset('/img/landing/Desarrollo_proyectos.jpg')}}" alt="imagen de negociacion">
+                        <p>Desarrollo en diseño de proyectos de empaque.</p>
                     </div>
                     <div class="services_images--item">
                         <h3>Asistencia Tecnica</h3>
-                        <img src="{{asset('/img/landing/Asistencia_tecnica.png')}}" alt="Asistencia tecnica">
+                        <img src="{{asset('/img/landing/Asistencia_tecnica.jpg')}}" alt="Asistencia tecnica">
                         <p>Como una ventaja competitiva hacia nuestros clientes, la asistencia técnica personalizada en el área de producción y cartón.</p>
-                    </div>
-                    <div class="services_images--item">
-                        <h3>Diseño de proyectos</h3>
-                        <img src="{{asset('/img/landing/Desarrollo_proyectos.png')}}" alt="imagen de negociacion">
-                        <p>Desarrollo en diseño de proyectos de empaque.</p>
                     </div>
                 </div>
                 <div class="service mr">
