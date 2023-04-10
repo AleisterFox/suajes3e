@@ -441,6 +441,10 @@
                                             <option value="1040">1040</option>
                                         </select>
                                     </div>
+                                    <div class="input_box">
+                                        <label for="M_puentes">Madera puentes</label>
+                                        <input type="text" id="M_puentes" name="M_puentes" class="form_control">
+                                    </div>
                                 </div>
                                 <!-- Step4 -->
                                 <div class="user_details form-section">
