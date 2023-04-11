@@ -14,6 +14,10 @@ body {
     background-color: #eee;
 }
 
+h2 {
+    color: #e63607 !important;
+}
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -350,7 +354,7 @@ h1{
 
 .services__title {
     text-align: center;
-    font-size: 36px;
+    font-size: 2rem;
     margin-bottom: 30px;
 }
 
@@ -477,7 +481,7 @@ h1{
     margin-bottom: 10px;
     margin-right: -20px;
     width: 102%;
-    font-size: small;
+    font-size: 2.9vh;
 
 }
 
@@ -669,7 +673,7 @@ h1{
 }
   
 .customers h2 {
-    font-size: 36px;
+    font-size: 2rem;
     margin-bottom: 40px;
     text-align: center;
 }
@@ -751,7 +755,7 @@ h1{
 }
 
 .contact-us h2 {
-    font-size: 36px;
+    font-size: 2rem;
     text-align: center;
 }
 

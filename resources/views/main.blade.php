@@ -65,7 +65,7 @@
 
         <section id="services" class="services">
             <div class="services__container">
-                <h2 class="services__title">Nuestros Servicios</h2>
+                <h2 class="services__title">Nuestros servicios</h2>
                 <p class="services_description">Suajes3E se especializa en:</p>
                 <div class="services_images">
                     <div class="services_images--item">
@@ -98,8 +98,8 @@
                     <h3 class="service__title">Suajes</h3>
                     <p class="service__description">Es una pieza de madera con reglas de metal incrustadas, las cuales tienen bordes de corte y/o doblez. Contiene hule botador (que ayuda a que el cartón sea expulsado de las figuras de corte). En Suajes3E, nos especializamos en 2 tipos de suajes, tales como:</p>
                     <ul class="service__description">
-                        <li>Suaje Plano</li>
-                        <li>Suaje Rotativo</li>
+                        <li>suaje plano</li>
+                        <li>suaje rotativo</li>
                     </ul>
                     <div class="gallery">
                         <img class="gallery__image" src="{{asset('img/landing/suajerotativo.jpeg')}}" alt="suaje curvo terminado" />
@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <div class="service ml">
-                    <h3 class="service__title">CLICHÉS DE IMPRESIÓN PARA CARTON</h3>
+                    <h3 class="service__title">Clichés de impresion para carton</h3>
                     <p class="service__description">El cliché para impresión es una pieza fabricada en goma con forma de placa, esta pieza se ocupa de recabar la tinta de otra bobina cargada y la superficie en relieve del cliché la recoge y estampa el diseño en la caja o en el producto escogido. En Suajes3E nos especializamos en diseñar el cliché ideal para su empaque.</p>
                     <br>
                     <div class="gallery">
@@ -122,7 +122,7 @@
 
 
         <section class="customers" id="customers">
-            <h2>Nuestros Clientes</h2>
+            <h2>Nuestros clientes</h2>
             <div class="slider" id="customers-slider">
                 <div class="slide-track">
                     <div class="slide">
