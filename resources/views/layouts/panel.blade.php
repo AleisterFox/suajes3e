@@ -39,7 +39,7 @@
         <img src="{{asset ('img/brand/logo.png')}}" class="navbar-logo" alt="logo suajes y montajes 3e">
       </a>
       <!-- User -->
-      <ul class="nav align-items-center d-md-none">
+      <!-- <ul class="nav align-items-center d-md-none">
         <li class="nav-item dropdown">
           <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="ni ni-bell-55"></i>
@@ -86,7 +86,7 @@
             </a>
           </div>
         </li>
-      </ul>
+      </ul> -->
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="sidenav-collapse-main">
         <!-- Collapse header -->
@@ -94,8 +94,7 @@
           <div class="row">
             <div class="col-6 collapse-brand">
               <a href="./index.html">
-                <img src="{{asset ('img/brand/blue.png')}}">
-                <img src="{{asset ('img/brand/blue2.png')}}">
+                <img src="{{asset ('img/brand/logo.png')}}">
               </a>
             </div>
             <div class="col-6 collapse-close">
@@ -107,7 +106,7 @@
           </div>
         </div>
         <!-- Form -->
-        <form class="mt-4 mb-3 d-md-none">
+        <!-- <form class="mt-4 mb-3 d-md-none">
           <div class="input-group input-group-rounded input-group-merge">
             <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
             <div class="input-group-prepend">
@@ -116,7 +115,7 @@
               </div>
             </div>
           </div>
-        </form>
+        </form> -->
         <!-- Navigation -->
          @include('includes.panel.menu')
       </div>
@@ -139,8 +138,10 @@
             </div>
           </div>
         </form> -->
+
         <!-- User -->
-        <ul class="navbar-nav align-items-center d-none d-md-flex">
+
+        <!-- <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
@@ -174,7 +175,7 @@
               </a>
             </div>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </nav>
     <!-- End Navbar -->

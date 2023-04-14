@@ -443,7 +443,7 @@
                                     </div>
                                     <div class="input_box">
                                         <label for="M_puentes">Madera puentes</label>
-                                        <input type="text" id="M_puentes" name="M_puentes" class="form_control">
+                                        <input type="text" id="M_puentes" name="M_puentes" class="form_control" required>
                                     </div>
                                 </div>
                                 <!-- Step4 -->
@@ -485,7 +485,12 @@
                                         </select>
                                     </div>
                                     <div class="input_box">
-                                        <input type="text" name="Hule" id="Hule" class="form_control" value="1/2 x 1/2 x 1 1/4" hidden>
+                                        <label for="Hule" class="label">Hule</label>
+                                        <select name="Hule" id="Hule" class="form_control">
+                                            <option value="">Select an option</option>
+                                            <option value="1/2 x 1/2 x 1 1/4">1/2 x 1/2 x 1 1/4</option>
+                                            <option value="7MM 9x18">7MM "9x18"</option>
+                                        </select>
                                     </div>
                                     <div class="input_box file-select">
                                         <label for="" class="label">Trazo</label>
